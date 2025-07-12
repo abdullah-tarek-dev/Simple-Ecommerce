@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Report Card Styling */
+.report-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(33% - 20px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Prevent content overflow */
+  max-height: 400px; /* Limit height */
+  position: relative;
+}
+
+.report-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Header */
+.report-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #eeeeee;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.report-card .card-header h2 {
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Button Group */
+.report-card .btn-group {
+  display: flex;
+  gap: 12px;
+}
+
+.report-card .report-btn {
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.report-card .pdf-btn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.report-card .pdf-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.report-card .excel-btn {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.report-card .excel-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Data Display */
+.report-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-x: auto; /* Enables horizontal scroll if needed */
+  max-height: 300px; /* Adjust the height as needed */
+}
+
+.report-card li {
+  padding: 8px 0;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  border-bottom: 1px solid #f1f1f1;
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+.report-card p {
+  font-size: 14px;
+  color: #555;
+  word-break: break-word; /* Ensures long text wraps inside the box */
+  white-space: nowrap; /* Prevent wrapping for single long lines */
+  overflow-x: auto; /* Enables horizontal scroll */
+  max-width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .report-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .report-card {
+    width: 100%;
+  }
+
+  .dashboard-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

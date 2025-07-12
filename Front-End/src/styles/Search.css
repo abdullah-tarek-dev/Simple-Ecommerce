@@ -1,0 +1,119 @@
+.search-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f4f8;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.search-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #1e293b;
+}
+
+.search-info {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.search-bar input {
+  padding: 14px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  width: 60%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.search-bar input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #10b98150;
+}
+
+.search-bar button {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-bar button:hover {
+  background-color: #0f766e;
+  transform: scale(1.05);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.products-grid p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #64748b;
+}
+
+.no-results {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #f87171;
+  font-weight: bold;
+  margin-top: 50px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* تحسين تأثيرات hover على Card */
+.products-grid .product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.products-grid .product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* تحسين الحواف والنصوص */
+.search-info {
+  font-style: italic;
+}
+
+.search-bar input::placeholder {
+  color: #6b7280;
+}
+
+.search-bar input:focus::placeholder {
+  color: #10b981;
+}

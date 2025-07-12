@@ -1,0 +1,68 @@
+/* الخلفية العامة للصفحة */
+.container {
+  background-color: #f0f4f8;
+}
+
+/* حاوية المنتجات */
+.products-container {
+  max-width: 1300px;
+  padding: 60px 30px;
+  margin: auto;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+
+/* عنوان المنتجات */
+.products-header {
+  font-size: 2.5rem;
+  color: #0f172a;
+  margin-bottom: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* عدد المنتجات المعروضة */
+.product-count {
+  font-size: 1.5rem;
+  color: #10b981;
+  margin-left: 10px;
+}
+
+/* النص أثناء تحميل المنتجات */
+.loading-text {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #475569;
+}
+
+/* شبكة عرض المنتجات */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 20px;
+  justify-items: center;
+}
+
+/* زر Load More */
+.load-more {
+  background-color: #0f172a;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+  display: block;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* تأثير عند مرور الماوس على زر Load More */
+.load-more:hover {
+  background-color: #10b981;
+  transform: scale(1.05);
+}

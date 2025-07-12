@@ -1,0 +1,137 @@
+/* styles/Home.css */
+
+.home-container {
+  background-color: #f0f4f8;
+}
+
+.home {
+  padding: 60px 30px;
+  max-width: 1300px;
+  margin: auto;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 50px;
+  animation: fadeInDown 1s ease;
+}
+
+.home-header h1 {
+  font-size: 3rem;
+  color: #0f172a;
+  font-weight: bold;
+}
+
+.home-header p {
+  color: #475569;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.featured-products {
+  margin-bottom: 60px;
+}
+
+.featured-products h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #1e293b;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.loading,
+.no-products {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #64748b;
+  margin-top: 20px;
+}
+
+.cta {
+  background-color: #1e293b;
+  color: white;
+  padding: 40px 20px;
+  border-radius: 20px;
+  text-align: center;
+  animation: fadeInUp 1s ease;
+}
+
+.cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.cta p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #cbd5e1;
+}
+
+.cta-button {
+  background-color: #10b981;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0f766e;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 500px) {
+  .cta h2 {
+    font-size: 1.6rem;
+  }
+
+  .cta p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+
+  .home-header h1 {
+    font-size: 2.3rem;
+  }
+
+  .home-header p {
+    font-size: 1rem;
+  }
+}
